@@ -8,13 +8,22 @@
   --blue: #3b82f6;
 }
 
-.gradient-text {
+.text-gradient-1 {
   background: #3b82f6;
   background: -webkit-linear-gradient(to right, #3b82f6 0%, #7c3aed 100%);
   background: -moz-linear-gradient(to right, #3b82f6 0%, #7c3aed 100%);
   background: linear-gradient(to right, #3b82f6 0%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-1 {
+  background: rgb(41, 168, 236);
+  background: linear-gradient(
+    90deg,
+    rgba(41, 168, 236, 1) 50%,
+    rgba(0, 127, 255, 1) 100%
+  );
 }
 
 @keyframes background-pan {

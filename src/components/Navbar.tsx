@@ -32,7 +32,7 @@ const Navbar = (props: NavbarProps) => {
             </span>
           </h2>
         </div>
-        <div className="ml-16 hidden list-none flex-row items-center gap-x-9 lg:flex">
+        <div className="ml-16 hidden list-none flex-row items-center gap-x-4 lg:flex">
           {navItems.map((item) => {
             return (
               <Link href={item.link}>

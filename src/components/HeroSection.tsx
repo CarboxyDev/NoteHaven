@@ -21,10 +21,10 @@ const HeroSection = () => {
               interface for sharing notes around the world.
             </p>
             <div className="mt-24 flex flex-row">
-              <Button size="lg" variant="default" font="semibold">
+              <button className="duration-400 peer rounded-lg bg-primary px-10 py-5 font-secondary font-medium text-white shadow-lg shadow-primary/50 transition-colors delay-200 ease-in hover:bg-primary-400 hover:shadow-2xl hover:shadow-primary-400/50">
                 Get started
-              </Button>
-              <button className="text-md ml-8 flex flex-row items-center font-semibold text-gray-500 hover:text-gray-700">
+              </button>
+              <button className="text-md ml-12 flex flex-row items-center font-semibold text-gray-500 transition-all delay-200 duration-300 ease-in hover:text-gray-700 peer-hover:translate-x-8">
                 Learn more <ArrowSmallRightIcon className="ml-2 h-4 w-4" />
               </button>
             </div>
@@ -37,11 +37,11 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
             whileHover={{
-              scale: 1.02,
+              scale: 1.1,
             }}
           >
             <img
-              src="/generic-hero-image-1.png"
+              src="/hero-graphic.png"
               alt="hero-image"
               className="lg: mx-auto w-[456px] lg:mx-0 lg:ml-auto lg:w-[342px] xl:w-[456px]"
             />
