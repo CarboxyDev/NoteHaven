@@ -35,7 +35,7 @@ const Navbar = (props: NavbarProps) => {
         <div className="ml-16 hidden list-none flex-row items-center gap-x-4 lg:flex">
           {navItems.map((item) => {
             return (
-              <Link href={item.link}>
+              <Link href={item.link} scroll={false}>
                 <li
                   key={uuidv4()}
                   className={cn(

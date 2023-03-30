@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Button from "./Button";
 import { ArrowSmallRightIcon } from "../utils/icons";
+import Link from "next/link";
 
 // NOTE: This is a section and not a component so it'll probably have very little modularity
 
@@ -21,9 +22,11 @@ const HeroSection = () => {
               interface for sharing notes around the world.
             </p>
             <div className="mt-24 flex flex-row">
-              <button className="duration-400 peer rounded-lg bg-primary px-10 py-5 font-secondary font-medium text-white shadow-lg shadow-primary/50 transition-colors delay-200 ease-in hover:bg-primary-400 hover:shadow-2xl hover:shadow-primary-400/50">
-                Get started
-              </button>
+              <Link href="#get-started" scroll={false}>
+                <button className="duration-400 peer rounded-lg bg-primary px-10 py-5 font-secondary font-medium text-white shadow-lg shadow-primary/50 transition-colors delay-200 ease-in hover:bg-primary-400 hover:shadow-2xl hover:shadow-primary-400/50">
+                  Get started
+                </button>
+              </Link>
               <button className="text-md ml-12 flex flex-row items-center font-semibold text-gray-500 transition-all delay-200 duration-300 ease-in hover:text-gray-700 peer-hover:translate-x-8">
                 Learn more <ArrowSmallRightIcon className="ml-2 h-4 w-4" />
               </button>

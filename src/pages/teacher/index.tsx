@@ -15,10 +15,16 @@ export async function getServerSideProps(context: any) {
   const session = cookies.get("session");
   let user;
 
-  if (!session) {
-    context.res.writeHead(302, { Location: "/login" });
-    context.res.end();
+  if (!session || session == undefined) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/login",
+      },
+      props: {},
+    };
   } else if (session) {
+    console.log("[SSR] /teacher/index.tsx: session: ", session);
     try {
       const checkSession = await prisma.session.findUnique({
         where: {
@@ -38,11 +44,16 @@ export async function getServerSideProps(context: any) {
         }
       }
     } catch (error) {
-      context.res.writeHead(302, { Location: "/login" });
-      context.res.end();
+      return {
+        redirect: {
+          permanent: false,
+          destination: "/login",
+        },
+        props: {},
+      };
     }
   }
-  console.log("[SSR] /teacher/index.tsx: session: ", session);
+
   return {
     props: {
       session: session,
