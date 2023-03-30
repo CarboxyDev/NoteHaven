@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="">
         <div id="app-container" className="px-4 sm:px-8 lg:px-20 xl:px-28">
-          <Navbar />
+          <Navbar active={"home"} />
           <HeroSection />
         </div>
       </main>
