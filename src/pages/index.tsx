@@ -5,6 +5,7 @@ import Divider from "../components/Divider";
 import FeatureSection from "../components/FeatureSection";
 import Filler from "../components/Filler";
 import Footer from "../components/Footer";
+import GetStarted from "../components/GetStarted";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
 import PoweredSection from "../components/PoweredSection";
@@ -42,6 +43,8 @@ const Home: NextPage = () => {
               backgroundImage="bg-custom-3"
             />
           </div>
+          <Filler height="h-48" />
+          <GetStarted />
           <Filler height="h-48" />
           <TestimonialSection />
           <Filler height="h-48" />

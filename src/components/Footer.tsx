@@ -11,7 +11,9 @@ const Footer = () => {
             alt="brand-logo"
             className="h-8 w-8"
           ></img>
-          <h3 className="ml-3 font-semibold text-slate-900">NoteHaven</h3>
+          <h3 className="ml-3 font-secondary font-semibold text-slate-900">
+            NoteHaven
+          </h3>
           <span className="ml-2 rounded border border-gray-300 px-3 py-1 text-xs font-semibold tracking-wider text-gray-300 transition-colors delay-150 ease-in-out hover:border-emerald-400 hover:bg-emerald-400 hover:text-white">
             BETA
           </span>

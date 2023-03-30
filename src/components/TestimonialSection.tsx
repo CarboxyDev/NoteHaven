@@ -7,7 +7,7 @@ const TestimonialSection = () => {
         <div className="flex flex-col items-center justify-center">
           <h2
             id="testimonials"
-            className="mb-32 mr-auto text-5xl font-semibold text-gray-700"
+            className="mb-32 mr-auto font-secondary text-5xl font-semibold text-gray-700"
           >
             Testimonials from people who{" "}
             <span className="magic-text">love us</span>
@@ -31,7 +31,7 @@ const TestimonialSection = () => {
                 author={{
                   name: "Andrew Smith",
                   title: "Student at Caltech",
-                  image: "generic-man-1.png",
+                  image: "generic-man-3.png",
                 }}
               />
               <TestimonialCard
@@ -41,7 +41,7 @@ const TestimonialSection = () => {
                 author={{
                   name: "Arron Jefferson",
                   title: "Student at NYU",
-                  image: "generic-man-1.png",
+                  image: "generic-man-2.png",
                 }}
               />
               <TestimonialCard
@@ -51,7 +51,7 @@ const TestimonialSection = () => {
                 author={{
                   name: "Peter Schmitt",
                   title: "Sr. Physcist at NASA",
-                  image: "generic-man-1.png",
+                  image: "generic-old-man-1.png",
                 }}
               />
               <TestimonialCard
@@ -69,9 +69,9 @@ const TestimonialSection = () => {
                   "I know this is a bit of a cliche but this website has really changed my life. I'm so grateful for the team behind it."
                 }
                 author={{
-                  name: "Lydia O'Connell",
-                  title: "Teaching Assistant at MIT",
-                  image: "generic-woman-1.png",
+                  name: "Sahil Gupta",
+                  title: "Student at MSIT",
+                  image: "generic-man-4.png",
                 }}
               />
             </div>
