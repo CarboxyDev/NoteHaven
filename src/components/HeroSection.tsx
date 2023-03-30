@@ -27,9 +27,16 @@ const HeroSection = () => {
                   Get started
                 </button>
               </Link>
-              <button className="text-md ml-12 flex flex-row items-center font-semibold text-gray-500 transition-all delay-200 duration-300 ease-in hover:text-gray-700 peer-hover:translate-x-8">
-                Learn more <ArrowSmallRightIcon className="ml-2 h-4 w-4" />
-              </button>
+              <Link
+                href="#features"
+                scroll={false}
+                className="ml-12 flex flex-row items-center"
+              >
+                <button className="text-md font-semibold text-gray-500 transition-all delay-200 duration-300 ease-in hover:text-gray-700 peer-hover:translate-x-8">
+                  Learn more{" "}
+                  <ArrowSmallRightIcon className="ml-2 inline h-4 w-4" />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
