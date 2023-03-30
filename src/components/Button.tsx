@@ -18,10 +18,18 @@ const buttonVariants = cva(
         sm: "text-md py-2 px-3",
         xs: "text-sm py-2 px-2",
       },
+      font: {
+        semibold: "font-semibold",
+        bold: "font-bold",
+        normal: "font-normal",
+        light: "font-light",
+      },
     },
+
     defaultVariants: {
       variant: "default",
       size: "md",
+      font: "normal",
     },
   }
 );
@@ -29,12 +37,12 @@ const buttonVariants = cva(
 // FIXME: There's a bug where I'm unable to use className as a prop with the component. It causes the styling to go away.
 
 const Button = (props: ButtonProps) => {
-  const { size, variant, className } = props;
+  const { size, variant, font, className } = props;
 
   return (
     <>
       <button
-        className={cn(buttonVariants({ size, variant, className }))}
+        className={cn(buttonVariants({ size, variant, font, className }))}
         {...props}
       />
     </>

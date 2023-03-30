@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
+import Divider from "../components/Divider";
 import Navbar from "../components/Navbar";
 
 export default function Browse() {
@@ -28,6 +29,7 @@ export default function Browse() {
       <main className="">
         <div id="app-container" className="px-4 sm:px-8 lg:px-20 xl:px-28">
           <Navbar active={"notes"} />
+          <Divider />
           {notes.length > 0 &&
             notes.map((note: any) => {
               const imageUrl =

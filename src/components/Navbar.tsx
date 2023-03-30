@@ -25,7 +25,12 @@ const Navbar = (props: NavbarProps) => {
           <Link href="/">
             <img src="/generic-logo-1.png" className="h-12 w-12" alt="logo" />
           </Link>
-          <h2 className="text-lg font-semibold text-slate-800">NoteHaven</h2>
+          <h2 className="text-lg font-semibold text-slate-800">
+            NoteHaven
+            <span className="ml-2 rounded border border-gray-300 px-3 py-1 text-xs font-semibold tracking-wider text-gray-300 transition-colors delay-150 ease-in-out hover:border-emerald-400 hover:bg-emerald-400 hover:text-white">
+              BETA
+            </span>
+          </h2>
         </div>
         <div className="ml-16 hidden list-none flex-row items-center gap-x-9 lg:flex">
           {navItems.map((item) => {

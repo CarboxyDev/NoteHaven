@@ -3,6 +3,7 @@ import Cookies from "cookies";
 import { prisma } from "../../server/db/client";
 import Head from "next/head";
 import Navbar from "../../components/Navbar";
+import Divider from "../../components/Divider";
 
 interface TeacherIndexProps {
   session: any;
@@ -69,6 +70,7 @@ export default function TeacherIndex(props: TeacherIndexProps) {
               link: "/api/logout",
             }}
           />
+          <Divider />
           <div>{user && <span>{user.name}</span>}</div>
         </div>
       </main>

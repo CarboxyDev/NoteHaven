@@ -20,8 +20,8 @@ const HeroSection = () => {
               NoteHaven harnesses the power of IPFS to create a decentralized
               interface for sharing notes around the world.
             </p>
-            <div className="mt-15 flex flex-row">
-              <Button size="lg" variant="default">
+            <div className="mt-24 flex flex-row">
+              <Button size="lg" variant="default" font="semibold">
                 Get started
               </Button>
               <button className="text-md ml-8 flex flex-row items-center font-semibold text-gray-500 hover:text-gray-700">

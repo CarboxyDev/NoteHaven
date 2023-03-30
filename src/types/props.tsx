@@ -80,6 +80,7 @@ export type CardWithImageAndButtonProps = {
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size: "xl" | "lg" | "md" | "sm" | "xs";
   variant: "default" | "outline";
+  font?: "semibold" | "bold" | "normal" | "light";
 }
 
 export type FeatureItemProps = {
