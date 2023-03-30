@@ -38,8 +38,6 @@ export default async function handler(req: any, res: any) {
           handle: user.email,
         },
       });
-      console.log("--------------------------");
-      console.log(session);
 
       if (session) {
         // set cookie

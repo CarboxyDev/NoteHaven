@@ -6,15 +6,16 @@ import { cn } from "../utils/misc";
 
 interface NavbarProps {
   active: String;
+  CTAButton?: any;
 }
 
 const Navbar = (props: NavbarProps) => {
-  const { active } = props;
+  const { active, CTAButton } = props;
   const navItems = [
     { name: "Home", link: "/" },
     { name: "Notes", link: "/browse" },
     { name: "Login", link: "/login" },
-    { name: "Testimonials", link: "#testimonials" },
+    { name: "Testimonials", link: "/#testimonials" },
   ];
 
   return (
@@ -47,11 +48,20 @@ const Navbar = (props: NavbarProps) => {
         </div>
         <div className="ml-auto flex flex-row gap-x-6">
           <div className="hidden items-center justify-center sm:flex">
-            <Link href="/teacher">
-              <Button size="md" variant="outline">
-                Share notes
-              </Button>
-            </Link>
+            {!CTAButton && (
+              <Link href="/login">
+                <Button size="md" variant="outline">
+                  Share notes
+                </Button>
+              </Link>
+            )}
+            {CTAButton && (
+              <Link href={CTAButton.link}>
+                <Button size="md" variant="outline">
+                  {CTAButton.text}
+                </Button>
+              </Link>
+            )}
           </div>
 
           <div className="lg:hidden">

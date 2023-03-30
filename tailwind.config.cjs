@@ -13,12 +13,12 @@ module.exports = {
           200: "#bce9fb",
           300: "#81daf8",
           400: "#3ec7f2",
-          500: "#15b4e7",
+          500: "#29A8EC",
           600: "#088fc1",
           700: "#08729c",
           800: "#0b6081",
           900: "#0f4f6b",
-          DEFAULT: "#15b4e7",
+          DEFAULT: "#29A8EC",
         },
         secondary: {
           50: "#fef5ee",
@@ -37,6 +37,7 @@ module.exports = {
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
         inter: ["Inter var", ...defaultTheme.fontFamily.sans],
+        secondary: ["Eudoxus Sans", ...defaultTheme.fontFamily.sans],
       },
       spacing: {
         15: "60px",
