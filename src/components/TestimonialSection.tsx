@@ -16,7 +16,7 @@ const TestimonialSection = () => {
             <div className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 xl:grid-cols-3">
               <TestimonialCard
                 comment={
-                  "NoteHaven has helped completely revolutionalized my way of learning. I'd be losing marks without this app!"
+                  "NoteHaven has completely revolutionized my way of learning. I'd be losing marks without this app!"
                 }
                 author={{
                   name: "Aditya Kumar",
@@ -36,7 +36,7 @@ const TestimonialSection = () => {
               />
               <TestimonialCard
                 comment={
-                  "I love this app. I can't live without it. I've used it daily for the past 2 months and I already see significant improvements in my course grades. Thank you NoteHaven!"
+                  "I love this app. I can't live without it. I've used it daily for the past 2 months and I've already seen significant improvements in my course grades. Thank you NoteHaven!"
                 }
                 author={{
                   name: "Arron Jefferson",

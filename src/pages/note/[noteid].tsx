@@ -1,10 +1,15 @@
 import { useRouter } from "next/router";
 
-const Note = () => {
-  const router = useRouter();
-  const { noteid } = router.query;
+export async function getServerSideProps(context: any) {
+  const noteid = context.params.noteid;
+}
 
-  return <p>Note id: {noteid}</p>;
+const Note = () => {
+  return (
+    <>
+      <div></div>
+    </>
+  );
 };
 
 export default Note;
