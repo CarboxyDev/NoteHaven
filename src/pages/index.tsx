@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
 import PoweredSection from "../components/PoweredSection";
+import TestimonialSection from "../components/TestimonialSection";
 
 const Home: NextPage = () => {
   return (
@@ -41,6 +42,9 @@ const Home: NextPage = () => {
               backgroundImage="bg-custom-3"
             />
           </div>
+          <Filler height="h-48" />
+          <TestimonialSection />
+          <Filler height="h-48" />
           <Footer />
         </div>
       </main>
