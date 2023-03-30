@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <div className="flex flex-col justify-center px-6 py-12 sm:px-28">
+      <div className="flex flex-col justify-center py-12">
         <div className="h-px bg-gray-200"></div>
         <div className="mt-10 flex flex-row items-center justify-center leading-6">
           <img
@@ -17,7 +17,7 @@ const Footer = () => {
           </span>
         </div>
         <div className="mt-5 flex justify-center text-sm font-light leading-6 text-slate-500">
-          © 2023 CarboxyDev Inc. All rights reserved.
+          © 2023 CarboxyDev . All rights reserved.
         </div>
         <div className="mt-14 hidden list-none flex-row items-center justify-center gap-x-4 text-sm text-slate-600 sm:flex">
           <li className="rounded-md px-2 py-1  hover:bg-slate-50 hover:text-slate-700">
@@ -25,7 +25,7 @@ const Footer = () => {
           </li>
           <div className="h-1 w-1 rounded-full bg-[#D9D9D9]"></div>
           <li className="rounded-md px-2 py-1 hover:bg-slate-50 hover:text-slate-700">
-            <Link href="/notes">Notes</Link>
+            <Link href="/browse">Notes</Link>
           </li>
           <div className="h-1 w-1 rounded-full bg-[#D9D9D9]"></div>
           <li className="rounded-md px-2 py-1 hover:bg-slate-50 hover:text-slate-700">

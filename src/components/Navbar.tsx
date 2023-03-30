@@ -55,14 +55,14 @@ const Navbar = (props: NavbarProps) => {
           <div className="hidden items-center justify-center sm:flex">
             {!CTAButton && (
               <Link href="/login">
-                <Button size="md" variant="outline">
+                <Button size="md" variant="outline-neutral">
                   Share notes
                 </Button>
               </Link>
             )}
             {CTAButton && (
               <Link href={CTAButton.link}>
-                <Button size="md" variant="outline">
+                <Button size="md" variant="outline-neutral">
                   {CTAButton.text}
                 </Button>
               </Link>

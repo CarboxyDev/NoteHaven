@@ -10,6 +10,8 @@ const buttonVariants = cva(
         default: "bg-primary hover:bg-primary-400 text-white shadow-md",
         outline:
           "hover:bg-primary background-transparent border border-primary text-primary hover:text-white",
+        "outline-neutral":
+          "hover:bg-gray-400 hover:border-gray-400 bg-transparent border border-gray-300 text-gray-400 hover:text-white ",
       },
       size: {
         xl: "py-4 px-8",
