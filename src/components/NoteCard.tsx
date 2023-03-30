@@ -6,11 +6,11 @@ interface NoteCardProps {
   description: string;
   price: number;
   author: string;
-  cid: string;
+  noteid: string;
 }
 
 const NoteCard = (props: NoteCardProps) => {
-  const { title, description, price, author, cid } = props;
+  const { title, description, price, author, noteid } = props;
 
   return (
     <>
@@ -29,7 +29,7 @@ const NoteCard = (props: NoteCardProps) => {
           <span className="mt-3 text-gray-400">Authored by {author}</span>
           <div className="mt-8 h-px w-full bg-gray-200" />
           <div className="mt-6 h-11">
-            <Link href={`/note/${cid}`}>
+            <Link href={`/note/${noteid}`}>
               {price == 0 && (
                 <button className="flex h-full w-full items-center justify-center rounded-lg bg-primary text-white transition-colors delay-100 ease-in hover:bg-primary-600">
                   Get free access

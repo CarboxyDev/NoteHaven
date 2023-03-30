@@ -44,11 +44,6 @@ export default function Browse() {
           <div className="grid grid-cols-1 gap-20 sm:grid-cols-2 xl:grid-cols-3">
             {notes.length > 0 &&
               notes.map((note: any) => {
-                const imageUrl =
-                  "https://" +
-                  note.cid +
-                  ".ipfs.w3s.link/" +
-                  note.originalFileName;
                 return (
                   <NoteCard
                     key={note.id}
@@ -56,7 +51,7 @@ export default function Browse() {
                     description={note.description}
                     price={note.price}
                     author={note.author}
-                    cid={note.cid}
+                    noteid={note.id}
                   />
                 );
               })}
