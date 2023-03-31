@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import ReactSearchBox from "react-search-box";
 import NoteCard from "../components/NoteCard";
 import Footer from "../components/Footer";
+import { LoadingAnimatedIcon } from "../utils/icons";
 
 export default function Browse() {
   const [notes, setNotes] = useState<any[]>([]);
@@ -39,10 +40,17 @@ export default function Browse() {
           <Filler height="h-16" />
           <h2
             id="browse-notes"
-            className="mb-20 mr-auto font-secondary text-5xl font-semibold text-gray-700"
+            className="mb-24 mr-auto font-secondary text-5xl font-semibold text-gray-700"
           >
             Browse notes
           </h2>
+          {notes.length == 0 && (
+            <div className="flex flex-col items-center justify-center">
+              <h2 className="text-2xl font-semibold text-gray-700">
+                <LoadingAnimatedIcon className="h-16 w-16 stroke-primary" />
+              </h2>
+            </div>
+          )}
           <div className="grid grid-cols-1 gap-20 sm:grid-cols-2 xl:grid-cols-3">
             {notes.length > 0 &&
               notes.map((note: any) => {
