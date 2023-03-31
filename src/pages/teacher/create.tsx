@@ -26,6 +26,9 @@ export default function Create() {
     formData.append("description", descriptionInputRef.current?.value);
 
     try {
+      if (uploadButtonRef.current) {
+        uploadButtonRef.current.disabled = true;
+      }
       const response = await fetch("/api/upload", {
         method: "POST",
         body: formData,
@@ -43,8 +46,16 @@ export default function Create() {
       } else {
         const error = await response.json();
         toastError(error.message);
+        await sleep(2000);
+
+        if (uploadButtonRef.current) {
+          uploadButtonRef.current.disabled = false;
+        }
       }
     } catch (error: any) {
+      if (uploadButtonRef.current) {
+        uploadButtonRef.current.disabled = false;
+      }
       toastError(error);
     }
   };

@@ -21,7 +21,11 @@ const NoteCard = (props: NoteCardProps) => {
               {title}
             </h2>
             <div className="mt-2 h-px w-full bg-gray-200" />
-            <p className="mt-8 text-gray-500">{description}</p>
+            <p className="mt-8 text-gray-500">
+              {description.length > 200
+                ? description.slice(0, 200) + "..."
+                : description}
+            </p>
           </div>
           <span className={cn("block", "text-gray-400")}>
             {(price == 0 && "Free") || (price != 0 && "$ " + price)}
