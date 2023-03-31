@@ -84,7 +84,7 @@ const Login: NextPage = () => {
                 <br />
                 <span className="font-semibold">
                   {" "}
-                  email: johndoe@gmail.com, password: 123456
+                  email: johndoe1234@gmail.com, password: 123456
                 </span>
               </p>
             </div>
