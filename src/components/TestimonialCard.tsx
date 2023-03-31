@@ -13,7 +13,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
       }}
     >
       {/* self-start makes the TestimonalCards' heights independent of each other when together */}
-      <div className="max-w-screen-sm:max-w-xs h-auto w-84 self-start rounded-2xl border border-gray-200 px-8 py-7 shadow hover:shadow-md hover:shadow-primary-200 hover:transition-shadow hover:delay-200 hover:duration-200 lg:w-90 xl:w-96">
+      <div className="max-w-screen-sm:max-w-xs h-auto w-84 self-start rounded-2xl border border-gray-200 bg-white px-8 py-7 shadow hover:shadow-md hover:shadow-primary-200 hover:transition-shadow hover:delay-200 hover:duration-200 lg:w-90 xl:w-96">
         <p className="mb-8 break-words text-lg leading-8 text-gray-700">
           {comment}
         </p>
