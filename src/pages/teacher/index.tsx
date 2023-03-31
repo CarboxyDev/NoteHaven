@@ -12,12 +12,14 @@ import Button from "../../components/Button";
 interface TeacherIndexProps {
   session: any;
   user: any;
+  notes: any;
 }
 
 export async function getServerSideProps(context: any) {
   const cookies = new Cookies(context.req, context.res);
   const session = cookies.get("session");
   let user;
+  let notes;
 
   if (!session || session == undefined) {
     return {
@@ -46,6 +48,17 @@ export async function getServerSideProps(context: any) {
         if (!user) {
           throw new Error("Invalid user");
         }
+
+        notes = await prisma.note.findMany({
+          where: {
+            authorId: user.id,
+          },
+        });
+
+        if (!notes) {
+          throw new Error("Invalid notes");
+        }
+        console.log(notes);
       }
     } catch (error) {
       return {
@@ -62,6 +75,7 @@ export async function getServerSideProps(context: any) {
     props: {
       session: session,
       user: JSON.parse(JSON.stringify(user)),
+      notes: JSON.parse(JSON.stringify(notes)),
     },
   };
 }
@@ -69,6 +83,7 @@ export async function getServerSideProps(context: any) {
 export default function TeacherIndex(props: TeacherIndexProps) {
   const session = props.session;
   const user = props.user;
+  const notes = props.notes;
 
   return (
     <>
@@ -90,10 +105,16 @@ export default function TeacherIndex(props: TeacherIndexProps) {
           <div>
             <h2
               id="welcome"
-              className="mb-20 mr-auto font-secondary text-4xl font-semibold text-gray-700"
+              className="mb-10 mr-auto font-secondary text-4xl font-semibold text-gray-700"
             >
               Welcome back, {user.name}
             </h2>
+            <div className="mb-12 ">
+              <span>
+                You have <span>{notes.length}</span>{" "}
+                {notes.length == 1 ? "note" : "notes"}
+              </span>
+            </div>
             <Link href={"/teacher/create"}>
               <Button variant="default" size="lg">
                 Create a note

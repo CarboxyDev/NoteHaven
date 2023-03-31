@@ -40,7 +40,7 @@ export default async function handler(req: any, res: any) {
 
       const cid = await client.put(files);
       console.log("stored files with cid:", cid);
-      // get session
+
       const session = await prisma.session.findUnique({
         where: {
           id: req.cookies.session,

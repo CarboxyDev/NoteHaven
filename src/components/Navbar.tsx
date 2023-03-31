@@ -54,7 +54,7 @@ const Navbar = (props: NavbarProps) => {
         <div className="ml-auto flex flex-row gap-x-6">
           <div className="hidden items-center justify-center sm:flex">
             {!CTAButton && (
-              <Link href="/login">
+              <Link href="/teacher">
                 <Button size="md" variant="outline-neutral">
                   Share notes
                 </Button>

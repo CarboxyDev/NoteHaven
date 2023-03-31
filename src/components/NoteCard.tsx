@@ -20,7 +20,7 @@ const NoteCard = (props: NoteCardProps) => {
             <h2 className="font-secondary text-2xl font-semibold text-slate-700">
               {title}
             </h2>
-            <div className="mt-2 h-px w-full bg-gray-200" />
+            <div className="mt-4 h-px w-full bg-gray-200" />
             <p className="mt-8 text-gray-500">
               {description.length > 200
                 ? description.slice(0, 200) + "..."
