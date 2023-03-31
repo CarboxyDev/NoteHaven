@@ -96,3 +96,7 @@ html {
   background-size: 180% 180%;
   animation: self-gradient-animation 6s ease infinite;
 }
+
+textarea {
+  resize: none;
+}

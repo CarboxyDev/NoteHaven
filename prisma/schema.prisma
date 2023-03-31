@@ -19,7 +19,7 @@ model Note {
   title            String
   cid              String
   originalFileName String
-  description      String
+  description      String   @db.Text()
   author           User     @relation(fields: [authorId], references: [id])
   authorId         String
   rating           Float

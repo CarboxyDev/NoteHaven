@@ -11,13 +11,15 @@ export default function Browse() {
   const [notes, setNotes] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("/api/note?count=10")
+    fetch("/api/note")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch notes");
         return res.json();
       })
       .then((notesData) => {
-        setNotes(notesData.data);
+        let notes = notesData.data;
+        notes = notes.reverse();
+        setNotes(notes);
       })
       .catch((error) => {
         console.log(error);

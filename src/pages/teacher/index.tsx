@@ -4,6 +4,10 @@ import { prisma } from "../../server/db/client";
 import Head from "next/head";
 import Navbar from "../../components/Navbar";
 import Divider from "../../components/Divider";
+import Filler from "../../components/Filler";
+import Footer from "../../components/Footer";
+import Link from "next/link";
+import Button from "../../components/Button";
 
 interface TeacherIndexProps {
   session: any;
@@ -82,7 +86,22 @@ export default function TeacherIndex(props: TeacherIndexProps) {
             }}
           />
           <Divider />
-          <div>{user && <span>{user.name}</span>}</div>
+          <Filler height="h-16" />
+          <div>
+            <h2
+              id="welcome"
+              className="mb-20 mr-auto font-secondary text-4xl font-semibold text-gray-700"
+            >
+              Welcome back, {user.name}
+            </h2>
+            <Link href={"/teacher/create"}>
+              <Button variant="default" size="lg">
+                Create a note
+              </Button>
+            </Link>
+          </div>
+          <Filler height="h-48" />
+          <Footer />
         </div>
       </main>
     </>

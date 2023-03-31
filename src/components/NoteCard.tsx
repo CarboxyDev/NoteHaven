@@ -26,7 +26,6 @@ const NoteCard = (props: NoteCardProps) => {
           <span className={cn("block", "text-gray-400")}>
             {(price == 0 && "Free") || (price != 0 && "$ " + price)}
           </span>
-          <span className="mt-3 text-gray-400">Authored by {author}</span>
           <div className="mt-8 h-px w-full bg-gray-200" />
           <div className="mt-6 h-11">
             <Link href={`/note/${noteid}`}>
