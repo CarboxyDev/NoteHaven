@@ -46,12 +46,10 @@ export default function Browse() {
           </h2>
           {notes.length == 0 && (
             <div className="flex flex-col items-center justify-center">
-              <h2 className="text-2xl font-semibold text-gray-700">
-                <LoadingAnimatedIcon className="h-16 w-16 stroke-primary" />
-              </h2>
+              <LoadingAnimatedIcon className="h-16 w-16 stroke-primary" />
             </div>
           )}
-          <div className="grid grid-cols-1 gap-20 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 items-center gap-20 md:grid-cols-2 xl:grid-cols-3">
             {notes.length > 0 &&
               notes.map((note: any) => {
                 return (

@@ -21,10 +21,10 @@ const NoteCard = (props: NoteCardProps) => {
 
   return (
     <>
-      <div className="max-w-screen-sm:max-w-xs w-60 self-start rounded-2xl border border-gray-200 bg-white pb-11 shadow-sm lg:w-100">
+      <div className="max-w-screen-sm:max-w-xs mx-auto w-90 self-start rounded-2xl border border-gray-200 bg-white pb-11 shadow-sm lg:w-96">
         <div className="mt-7 px-5 sm:px-6 md:px-7">
           <div className="mb-9 mt-4">
-            <h2 className="font-secondary text-2xl font-semibold text-slate-700">
+            <h2 className="font-secondary text-2xl font-semibold text-gray-600">
               {title}
             </h2>
             <div className="mt-4 h-px w-full bg-gray-200" />

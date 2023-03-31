@@ -69,7 +69,7 @@ const Login: NextPage = () => {
           <Navbar active="login" />
           <Divider />
           <Filler height="h-24" />
-          <div className="flex flex-row items-center justify-center gap-20">
+          <div className="flex flex-col items-center justify-center gap-20 lg:flex-row">
             <div>
               <h2
                 id="login"
@@ -84,7 +84,7 @@ const Login: NextPage = () => {
                 <br />
                 <span className="font-semibold">
                   {" "}
-                  email: johndoe1234@gmail.com, password: 123456
+                  email: johndoe1234@test.com, password: 123456
                 </span>
               </p>
             </div>

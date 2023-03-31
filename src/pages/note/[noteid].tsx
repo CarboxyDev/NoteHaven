@@ -74,8 +74,8 @@ const Note = (props: { note: any; author: any }) => {
           <Navbar active={"notes"} />
           <Divider />
           <Filler height="h-16" />
-          <div className="grid grid-cols-6 gap-8">
-            <div className="col-span-4 flex flex-col rounded-2xl border border-gray-200 bg-white px-18 py-10 shadow-sm">
+          <div className="grid grid-cols-none grid-rows-6 gap-8 lg:grid-cols-6 lg:grid-rows-none">
+            <div className="row-span-4 flex flex-col rounded-2xl border border-gray-200 bg-white px-18 py-10 shadow-sm lg:col-span-4">
               <h2
                 id="note-title"
                 className="mr-auto font-secondary text-5xl font-semibold leading-[60px] text-gray-700"
@@ -106,7 +106,7 @@ const Note = (props: { note: any; author: any }) => {
                 </Link>
               </div>
             </div>
-            <div className="col-span-2 flex flex-col rounded-2xl border border-gray-200 bg-white px-12 py-10 shadow-sm ">
+            <div className="row-span-2 flex flex-col rounded-2xl border border-gray-200 bg-white px-12 py-10 shadow-sm lg:col-span-2">
               <div className="mb-12 flex items-center justify-center">
                 <img
                   src={`https://api.dicebear.com/6.x/initials/svg?seed=${author.name}&size=100&radius=50`}

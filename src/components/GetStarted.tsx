@@ -16,7 +16,7 @@ const GetStarted = () => {
         >
           Get started in <span className="magic-text">an instant</span>
         </h2>
-        <div className="grid w-full grid-cols-2 gap-12 ">
+        <div className="grid w-full grid-cols-none grid-rows-2 gap-12 lg:grid-cols-2 lg:grid-rows-none ">
           <div className="group/teacher peer/teacher flex flex-col rounded-2xl border border-gray-200 bg-white px-12 py-10 peer-hover/student:bg-black">
             <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/50">
               <TrophyIcon className="h-12 w-12 text-sky-600" />
