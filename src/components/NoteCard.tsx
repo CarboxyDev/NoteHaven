@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useState } from "react";
+import { LoadingAnimatedIcon } from "../utils/icons";
 import { cn } from "../utils/misc";
 
 interface NoteCardProps {
@@ -11,6 +13,11 @@ interface NoteCardProps {
 
 const NoteCard = (props: NoteCardProps) => {
   const { title, description, price, author, noteid } = props;
+  const [isRedirecting, setIsRedirecting] = useState(false);
+
+  const clickNoteEvent = () => {
+    setIsRedirecting(true);
+  };
 
   return (
     <>
@@ -32,18 +39,25 @@ const NoteCard = (props: NoteCardProps) => {
           </span>
           <div className="mt-8 h-px w-full bg-gray-200" />
           <div className="mt-6 h-11">
-            <Link href={`/note/${noteid}`}>
-              {price == 0 && (
-                <button className="flex h-full w-full items-center justify-center rounded-lg bg-primary text-white transition-colors delay-100 ease-in hover:bg-primary-600">
-                  View note
-                </button>
-              )}
-              {price != 0 && (
-                <button className="flex h-full w-full items-center justify-center rounded-lg bg-primary text-white transition-colors delay-100 ease-in hover:bg-primary-600">
-                  Get access
-                </button>
-              )}
-            </Link>
+            {!isRedirecting && (
+              <Link href={`/note/${noteid}`} onClick={clickNoteEvent}>
+                {price == 0 && (
+                  <button className="flex h-full w-full items-center justify-center rounded-lg bg-primary text-white transition-colors delay-100 ease-in hover:bg-primary-600">
+                    View note
+                  </button>
+                )}
+                {price != 0 && (
+                  <button className="flex h-full w-full items-center justify-center rounded-lg bg-primary text-white transition-colors delay-100 ease-in hover:bg-primary-600">
+                    Get access
+                  </button>
+                )}
+              </Link>
+            )}
+            {isRedirecting && (
+              <button className="flex h-full w-full items-center justify-center rounded-lg bg-primary text-white transition-colors delay-100 ease-in hover:bg-primary-600">
+                <LoadingAnimatedIcon className="h-6 w-6 stroke-white" />
+              </button>
+            )}
           </div>
         </div>
       </div>
