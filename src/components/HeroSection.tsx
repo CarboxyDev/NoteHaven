@@ -42,9 +42,9 @@ const HeroSection = () => {
         <div className="order-first lg:order-last">
           <motion.div
             className="flex flex-col"
-            initial={{ opacity: 0, scale: 0.75, x: 200, y: 200 }}
-            animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+            initial={{ opacity: 0, scale: 0.75, x: 200 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
             whileHover={{
               scale: 1.05,
             }}
