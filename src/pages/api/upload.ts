@@ -13,7 +13,7 @@ function makeStorageClient() {
   return new Web3Storage({ token: getAccessToken() });
 }
 
-const upload = promisify(multer({ dest: "./public/uploads" }).single("file"));
+const upload = promisify(multer({ dest: "/tmp" }).single("file"));
 const client = makeStorageClient();
 
 export default async function handler(req: any, res: any) {
