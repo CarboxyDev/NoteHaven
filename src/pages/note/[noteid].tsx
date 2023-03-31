@@ -1,5 +1,4 @@
 import { LinkIcon } from "@heroicons/react/24/solid";
-import { HeartIcon } from "@heroicons/react/24/outline";
 import Head from "next/head";
 import Link from "next/link";
 import Divider from "../../components/Divider";
@@ -72,7 +71,7 @@ const Note = (props: { note: any; author: any }) => {
       </Head>
       <main className="">
         <div id="app-container" className="px-4 sm:px-8 lg:px-20 xl:px-28">
-          <Navbar active={""} />
+          <Navbar active={"notes"} />
           <Divider />
           <Filler height="h-16" />
           <div className="grid grid-cols-6 gap-8">
@@ -93,7 +92,7 @@ const Note = (props: { note: any; author: any }) => {
               <h3 className="mb-6 text-xl font-semibold text-gray-600">
                 Note attachment
               </h3>
-              <div className="flex flex-row items-center gap-4 rounded-xl border border-yellow-300/30 bg-yellow-300/20 px-6 py-5 shadow-sm">
+              <div className="flex flex-row items-center gap-4 rounded-xl border border-yellow-300/30 bg-yellow-300/20 px-6 py-5 shadow-sm transition-colors delay-200 duration-300 ease-in-out hover:border-yellow-300/40 hover:bg-yellow-300/30">
                 <LinkIcon className="h-10 w-10 text-yellow-400/80" />
                 <Link
                   href={`https://${note.cid}.ipfs.dweb.link`}
@@ -135,7 +134,7 @@ const Note = (props: { note: any; author: any }) => {
                 </p>
               </div>
               <Divider />
-              <div className="mt-12 w-full">
+              <div className="mt-8 w-full">
                 <button
                   className={cn(
                     "duration-400 flex w-full flex-row items-center justify-center rounded-lg py-3 font-secondary text-lg font-medium text-white transition-colors delay-200 ease-in hover:bg-primary-600 active:scale-95",
