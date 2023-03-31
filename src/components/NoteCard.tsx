@@ -35,7 +35,7 @@ const NoteCard = (props: NoteCardProps) => {
             <Link href={`/note/${noteid}`}>
               {price == 0 && (
                 <button className="flex h-full w-full items-center justify-center rounded-lg bg-primary text-white transition-colors delay-100 ease-in hover:bg-primary-600">
-                  Get free access
+                  View note
                 </button>
               )}
               {price != 0 && (

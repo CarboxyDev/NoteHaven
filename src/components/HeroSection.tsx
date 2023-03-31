@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Button from "./Button";
 import { ArrowSmallRightIcon } from "../utils/icons";
 import Link from "next/link";
 
@@ -22,17 +21,17 @@ const HeroSection = () => {
               interface for sharing notes around the world.
             </p>
             <div className="mt-24 flex flex-row">
-              <Link href="#get-started" scroll={false}>
-                <button className="duration-400 peer rounded-lg bg-primary px-10 py-5 font-secondary font-medium text-white shadow-lg shadow-primary/50 transition-colors delay-200 ease-in hover:bg-primary-400 hover:shadow-2xl hover:shadow-primary-400/50">
+              <Link href="#get-started" className="peer" scroll={false}>
+                <button className="duration-400 rounded-lg bg-primary px-10 py-4 font-medium text-white shadow-md shadow-primary/50 transition-colors delay-200 ease-in hover:bg-primary-400 hover:shadow-xl hover:shadow-primary-400/50">
                   Get started
                 </button>
               </Link>
               <Link
                 href="#features"
                 scroll={false}
-                className="ml-12 flex flex-row items-center"
+                className="ml-12 flex flex-row items-center transition-all  delay-200 duration-300 ease-in peer-hover:translate-x-8"
               >
-                <button className="text-md font-semibold text-gray-500 transition-all delay-200 duration-300 ease-in hover:text-gray-700 peer-hover:translate-x-8">
+                <button className="text-md font-semibold text-gray-500 hover:text-gray-700">
                   Learn more{" "}
                   <ArrowSmallRightIcon className="ml-2 inline h-4 w-4" />
                 </button>
@@ -43,11 +42,11 @@ const HeroSection = () => {
         <div className="order-first lg:order-last">
           <motion.div
             className="flex flex-col"
-            initial={{ opacity: 0, scale: 0.75, x: 200 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            initial={{ opacity: 0, scale: 0.75, x: 200, y: 200 }}
+            animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             whileHover={{
-              scale: 1.1,
+              scale: 1.05,
             }}
           >
             <img
