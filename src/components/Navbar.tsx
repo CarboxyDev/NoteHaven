@@ -35,9 +35,8 @@ const Navbar = (props: NavbarProps) => {
         <div className="ml-16 hidden list-none flex-row items-center gap-x-4 lg:flex">
           {navItems.map((item) => {
             return (
-              <Link href={item.link} scroll={false}>
+              <Link key={uuidv4()} href={item.link} scroll={false}>
                 <li
-                  key={uuidv4()}
                   className={cn(
                     "rounded-md px-5 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-700",
                     active.toLowerCase() == item.name.toLowerCase()
