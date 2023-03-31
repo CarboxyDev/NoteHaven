@@ -116,7 +116,7 @@ const Note = (props: { note: any; author: any }) => {
                 />
               </div>
               <Divider />
-              <div className="mt-10 text-lg">
+              <div className="my-8 text-lg">
                 <p>
                   <span className="font-semibold text-gray-600">Author: </span>
                   <span className="text-gray-500">{author.name}</span>
@@ -134,11 +134,12 @@ const Note = (props: { note: any; author: any }) => {
                   </span>
                 </p>
               </div>
-              <div className="mt-20 w-full">
+              <Divider />
+              <div className="mt-12 w-full">
                 <button
                   className={cn(
-                    "duration-400 flex w-full flex-row items-center justify-center rounded-lg py-5 font-secondary text-lg font-medium text-white transition-colors delay-200 ease-in hover:bg-pink-700 active:scale-95",
-                    favorite ? "bg-pink-400" : "bg-pink-600"
+                    "duration-400 flex w-full flex-row items-center justify-center rounded-lg py-3 font-secondary text-lg font-medium text-white transition-colors delay-200 ease-in hover:bg-primary-600 active:scale-95",
+                    favorite ? "bg-gray-600" : "bg-primary"
                   )}
                   onClick={favoriteEvent}
                 >
