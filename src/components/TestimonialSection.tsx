@@ -50,7 +50,7 @@ const TestimonialSection = () => {
                 }
                 author={{
                   name: "Peter Schmitt",
-                  title: "Sr. Physcist at NASA",
+                  title: "Sr. Physicist at NASA",
                   image: "generic-old-man-1.png",
                 }}
               />

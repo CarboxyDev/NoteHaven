@@ -78,27 +78,27 @@ const Note = (props: { note: any; author: any }) => {
             <div className="row-span-4 flex flex-col rounded-2xl border border-gray-200 bg-white px-18 py-10 shadow-sm lg:col-span-4">
               <h2
                 id="note-title"
-                className="mr-auto font-secondary text-5xl font-semibold leading-[60px] text-gray-700"
+                className="mr-auto font-secondary text-4xl font-semibold leading-[60px] text-gray-700"
               >
                 {note.title}
               </h2>
 
-              <div className="mb-16 mt-16">
+              <div className="mb-10 mt-10">
                 <h3 className="text-xl font-semibold text-gray-600">
                   Description
                 </h3>
-                <p className="mr-16 mt-6 text-gray-500">{note.description}</p>
+                <p className="mr-16 mt-4 text-gray-500">{note.description}</p>
               </div>
               <h3 className="mb-6 text-xl font-semibold text-gray-600">
                 Note attachment
               </h3>
-              <div className="flex flex-row items-center gap-4 rounded-xl border border-yellow-300/30 bg-yellow-300/20 px-6 py-5 shadow-sm transition-colors delay-200 duration-300 ease-in-out hover:border-yellow-300/40 hover:bg-yellow-300/30">
-                <LinkIcon className="h-10 w-10 text-yellow-400/80" />
+              <div className="flex flex-row items-center gap-4 rounded-xl border border-primary-300/30 bg-primary-300/20 px-6 py-5 shadow-sm transition-colors delay-200 duration-300 ease-in-out hover:border-primary-300/40 hover:bg-primary-300/30">
+                <LinkIcon className="h-10 w-10 text-primary-600/80" />
                 <Link
                   href={`https://${note.cid}.ipfs.dweb.link`}
                   target="_blank"
                 >
-                  <h3 className="break-all font-medium text-gray-700">
+                  <h3 className="break-all font-medium text-primary-600">
                     {note.cid.slice(0, 16)}
                     ...
                     {note.cid.slice(-16)}
