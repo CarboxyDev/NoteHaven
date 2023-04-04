@@ -14,7 +14,7 @@ const Navbar = (props: NavbarProps) => {
   const navItems = [
     { name: "Home", link: "/" },
     { name: "Notes", link: "/browse" },
-    { name: "Login", link: "/login" },
+    { name: "Features", link: "/#features" },
     { name: "Testimonials", link: "/#testimonials" },
   ];
 
@@ -55,7 +55,7 @@ const Navbar = (props: NavbarProps) => {
             {!CTAButton && (
               <Link href="/teacher">
                 <Button size="md" variant="outline-neutral">
-                  Share notes
+                  Login
                 </Button>
               </Link>
             )}

@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           <Navbar active={"home"} />
           <Divider />
           <HeroSection />
-          <Filler height="h-24" />
+          <Filler height="h-30" />
           <div
             id="full-width-container"
             className="-mx-4 sm:-mx-8 lg:-mx-20 xl:-mx-28"
