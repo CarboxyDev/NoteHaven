@@ -7,7 +7,6 @@ import {
   MegaphoneIcon,
 } from "@heroicons/react/24/solid";
 import { clsx } from "clsx";
-import { twMerge as tw } from "tailwind-merge";
 import type { FeatureCardProps, FeatureItemProps } from "../types/props";
 import { cn } from "../utils/misc";
 
@@ -19,15 +18,13 @@ const FeatureItem = (props: FeatureItemProps) => {
       <div className="mx-8 my-6 flex flex-row items-center justify-center lg:mx-4 lg:my-10 xl:mx-8">
         <div className="mt-1 self-start">
           <div
-            className={tw(
-              cn(
-                "flex h-14 w-14 items-center justify-center rounded-full",
-                "[&>*]:h-6 [&>*]:w-6",
-                variant === "light" &&
-                  "bg-primary-300/60 text-primary-700 hover:bg-primary-300",
-                variant === "dark" &&
-                  "bg-primary text-primary-100 hover:bg-primary-400"
-              )
+            className={cn(
+              "flex h-14 w-14 items-center justify-center rounded-full transition delay-200 duration-200",
+              "[&>*]:h-6 [&>*]:w-6",
+              variant === "light" &&
+                "bg-primary-300/60 text-primary-700 hover:bg-primary-300",
+              variant === "dark" &&
+                "bg-primary text-primary-100 hover:bg-primary-400"
             )}
           >
             {icon}
