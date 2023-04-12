@@ -31,7 +31,7 @@ const GetStarted = () => {
               world a better place by sharing your knowledge with others.
             </p>
             <Link href="/teacher" className="self-start">
-              <button className="duration-400 mt-auto self-start rounded-lg bg-primary px-16 py-4 font-medium text-white shadow-md shadow-primary/50 transition-colors delay-200 ease-in hover:bg-primary-400 hover:shadow-xl hover:shadow-primary-400/50">
+              <button className="duration-400 mt-auto self-start rounded-lg bg-primary px-16 py-4 font-medium text-white shadow shadow-primary/50 transition delay-200 ease-in hover:bg-primary-400 hover:shadow-md hover:shadow-primary-400/50">
                 Sign up
               </button>
             </Link>
@@ -50,7 +50,7 @@ const GetStarted = () => {
               to your financial condition.
             </p>
             <Link href="/browse" className="mt-auto self-start">
-              <button className="duration-400 rounded-lg bg-primary px-16 py-4 font-medium text-white shadow-md shadow-primary/50 transition-colors delay-200 ease-in hover:bg-primary-400 hover:shadow-xl hover:shadow-primary-400/50">
+              <button className="duration-400 rounded-lg bg-primary px-16 py-4 font-medium text-white shadow shadow-primary/50 transition delay-200 ease-in hover:bg-primary-400 hover:shadow-md hover:shadow-primary-400/50">
                 View notes
               </button>
             </Link>

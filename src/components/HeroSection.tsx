@@ -22,7 +22,7 @@ const HeroSection = () => {
             </p>
             <div className="mt-24 flex flex-row">
               <Link href="#get-started" className="peer" scroll={false}>
-                <button className="duration-400 rounded-lg bg-primary px-10 py-4 font-medium text-white shadow-md shadow-primary/50 transition-colors delay-200 ease-in hover:bg-primary-400 hover:shadow-xl hover:shadow-primary-400/50">
+                <button className="duration-400 rounded-lg bg-primary px-10 py-4 font-medium text-white shadow shadow-primary/50 transition delay-200 ease-in hover:bg-primary-400 hover:shadow-md hover:shadow-primary-400/50">
                   Get started
                 </button>
               </Link>
