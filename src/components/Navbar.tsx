@@ -54,7 +54,10 @@ const Navbar = (props: NavbarProps) => {
           <div className="hidden items-center justify-center sm:flex">
             {!CTAButton && (
               <Link href="/teacher">
-                <button className="text-md rounded-md border border-gray-300 bg-transparent px-7 py-2 text-lg text-gray-400 transition-colors delay-100 ease-in hover:border-primary-500 hover:bg-primary-500 hover:text-white active:scale-95">
+                <button
+                  className="rounded-md border border-gray-300 bg-transparent px-7 py-2 text-sm text-gray-400 transition-colors delay-100 ease-in hover:border-primary-500 hover:bg-primary-500 hover:text-white
+                 active:scale-95"
+                >
                   Login
                 </button>
               </Link>
