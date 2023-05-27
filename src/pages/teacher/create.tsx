@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { cn, sleep, toastError, toastSuccess } from "../../utils/misc";
 import "react-toastify/dist/ReactToastify.css";
 import Head from "next/head";

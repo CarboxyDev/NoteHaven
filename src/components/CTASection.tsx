@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "../utils/misc";
 import Link from "next/link";
 import type { CTASectionProps } from "../types/props";
 
@@ -8,7 +8,7 @@ const CTASection = (props: CTASectionProps) => {
   return (
     <>
       <div
-        className={clsx(
+        className={cn(
           "flex flex-col items-center justify-center py-24 ",
           backgroundImage
         )}

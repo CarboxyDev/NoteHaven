@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useRouter } from "next/router";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { sleep } from "../utils/misc";
 import { toastError, toastSuccess } from "../utils/misc";

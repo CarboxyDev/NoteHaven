@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Divider from "../components/Divider";
 import Filler from "../components/Filler";
 import Navbar from "../components/Navbar";
-import ReactSearchBox from "react-search-box";
 import NoteCard from "../components/NoteCard";
 import Footer from "../components/Footer";
 import { LoadingAnimatedIcon } from "../utils/icons";
@@ -68,14 +67,6 @@ export default function Browse() {
           <Footer />
         </div>
       </main>
-    </>
-  );
-}
-
-export function SearchBar() {
-  return (
-    <>
-      <div></div>
     </>
   );
 }
